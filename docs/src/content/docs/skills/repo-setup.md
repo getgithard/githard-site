@@ -41,6 +41,8 @@ unknown  private vulnerability reporting (needs gh and an owner/repo)
 
 `unknown` means it couldn't reach that setting, usually because `gh` isn't signed in or you don't have access. GitHard reports those as unchecked, never as fine. The script exits `1` if anything is missing.
 
+If you've left something off on purpose, such as Discussions on a repo whose questions go elsewhere, list its name exactly as the audit prints it on its own line in `.github/audit-skip`. It then shows as `skipped`, and the audit doesn't fail on it.
+
 ## Why the ruleset doesn't require up-to-date branches
 
 When a ruleset requires branches to be up to date, every merge restarts CI on every other open PR, so a queue of ten PRs can take hours. The required checks still have to pass on each PR.
