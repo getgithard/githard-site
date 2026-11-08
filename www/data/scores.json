@@ -37,6 +37,30 @@
       ]
     },
     {
+      "name": "merging",
+      "cases": 3,
+      "with": [
+        9,
+        9
+      ],
+      "without": [
+        2,
+        9
+      ]
+    },
+    {
+      "name": "issues-and-roadmap",
+      "cases": 3,
+      "with": [
+        9,
+        9
+      ],
+      "without": [
+        3,
+        9
+      ]
+    },
+    {
       "name": "repo-setup",
       "cases": 2,
       "with": [
@@ -61,5 +85,5 @@
       ]
     }
   ],
-  "method": "Claude Code with Opus 5.5, 19 cases, three runs each with GitHard and three without. A Sonnet judge grades each answer against a written checklist, alongside file and regex checks. Runs from 8 Nov 2026. using-githard was re-run the same day after a fix. Where Claude already passes without GitHard, the case stays in as a regression check."
+  "method": "Claude Code with Opus 5.5, 25 cases, three runs each with GitHard and three without. A Sonnet judge grades each answer against a written checklist, alongside file and regex checks. Each skill shows its latest run, all from 8 Nov 2026. Where Claude already passes without GitHard, the case stays in as a regression check."
 }

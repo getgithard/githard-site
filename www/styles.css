@@ -117,10 +117,13 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
   .bubble { left: 0; top: 0; }
   .days { flex-direction: row; }
   .day { flex: 1; }
-  .top nav a:not(.gh) { display: none; }
+  .top nav a:not(.keep) { display: none; }
   section { padding: 64px 0; }
 }
 @media (prefers-reduced-motion: no-preference) {
   .terminal pre.typing span { animation: land .18s ease-out both; animation-delay: calc(var(--i) * 45ms); }
   @keyframes land { from { opacity: 0; transform: translateX(-6px); } }
 }
+
+/* Grid children default to min-width: auto, so the terminal's long lines would widen the whole page on phones. */
+.hero .wrap > *, .montage > *, .status .wrap > * { min-width: 0; }

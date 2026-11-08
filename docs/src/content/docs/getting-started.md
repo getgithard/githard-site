@@ -24,5 +24,7 @@ GitHard isn't released yet. The first release, `v0.1.0`, is planned before the n
 | [`fork-pr-safety`](/skills/fork-pr-safety/) | PRs from forks, before their CI runs. |
 | [`contributors`](/skills/contributors/) | Claims, replies, quiet PRs, reactions, an AI policy. |
 | [`writing`](/skills/writing/) | READMEs, docs, release notes and replies in a human voice. |
+| [`issues-and-roadmap`](/skills/issues-and-roadmap/) | Milestones, a board, and issues a newcomer can finish. |
+| [`merging`](/skills/merging/) | Merge when green, one PR at a time. |
 
-Eight more are planned: issues and roadmap, merging, releases, docs honesty, security baseline, org setup, growth and save point.
+Six more are planned: releases, docs honesty, security baseline, org setup, growth and save point.
