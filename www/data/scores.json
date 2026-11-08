@@ -61,6 +61,18 @@
       ]
     },
     {
+      "name": "releases",
+      "cases": 4,
+      "with": [
+        12,
+        12
+      ],
+      "without": [
+        6,
+        12
+      ]
+    },
+    {
       "name": "repo-setup",
       "cases": 2,
       "with": [
@@ -70,6 +82,18 @@
       "without": [
         0,
         6
+      ]
+    },
+    {
+      "name": "docs-honesty",
+      "cases": 3,
+      "with": [
+        9,
+        9
+      ],
+      "without": [
+        6,
+        9
       ]
     },
     {
@@ -85,5 +109,5 @@
       ]
     }
   ],
-  "method": "Claude Code with Opus 5.5, 25 cases, three runs each with GitHard and three without. A Sonnet judge grades each answer against a written checklist, alongside file and regex checks. Each skill shows its latest run, all from 8 Nov 2026. Where Claude already passes without GitHard, the case stays in as a regression check."
+  "method": "Claude Code with Opus 5.5, 32 cases, three runs each with GitHard and three without. A Sonnet judge grades each answer against a written checklist, alongside file and regex checks. Each skill shows its latest run, all from 8 Nov 2026. Where Claude already passes without GitHard, the case stays in as a regression check."
 }
