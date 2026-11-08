@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GitHard: boot camp for your GitHub repos</title>
+<meta name="description" content="A Claude Code plugin that sets up and runs your GitHub org and repos the way well-run projects do. Rulesets, pinned Actions, safe fork PRs, contributors who get a reply.">
+<meta property="og:title" content="GitHard: boot camp for your GitHub repos">
+<meta property="og:description" content="Your repo's been soft long enough. A Claude Code plugin that sets up and runs GitHub orgs and repos the way well-run projects do.">
+<meta property="og:image" content="https://githard.dev/img/social.png">
+<meta property="og:url" content="https://githard.dev/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="img/favicon.png">
+<link rel="preload" href="fonts/stencil.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="/"><img src="img/tank-head.png" alt="">GitHard</a>
+    <nav>
+      <a href="#montage">The montage</a>
+      <a href="#scoreboard">Scoreboard</a>
+      <a href="#drills">Drills</a>
+      <a href="https://docs.githard.dev">Docs</a>
+      <a class="gh" href="https://github.com/getgithard/githard">GitHub</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero" aria-labelledby="hero-title">
+  <div class="wrap">
+    <div>
+      <h1 id="hero-title">Your repo's been soft <span>long enough.</span></h1>
+      <p class="lede">GitHard is a Claude Code plugin that sets up your GitHub org and repos the way you'd want them a year from now, then helps you run them. <strong>Tank</strong> handles the drills: rulesets, pinned Actions, fork PRs read before they run, and a reply for every contributor.</p>
+      <div class="actions">
+        <a class="btn go" href="https://github.com/getgithard/githard">Star it on GitHub</a>
+        <a class="btn quiet" href="https://docs.githard.dev">Read the docs</a>
+      </div>
+    </div>
+    <figure class="tank">
+      <img src="img/tank.png" width="960" height="1080" alt="Tank, a muscular cartoon bulldog in a drill-sergeant hat, arms crossed and scowling.">
+      <figcaption class="bubble">Pinned to a tag? That's not a pin, soldier. That's a wish.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="montage" aria-labelledby="montage-title">
+  <div class="wrap">
+    <h2 id="montage-title">One repo, thirty days, no excuses.</h2>
+    <p class="intro">This is real output from GitHard's audit. Day 1 is a small Node CLI with a README, a license and a CI file. Day 30 is GitHard's own repo, after its own drills. Pick a day.</p>
+    <div class="montage">
+      <div class="days" role="group" aria-label="Pick a day">
+        <button class="day" type="button" data-day="1" aria-pressed="true"><b>Day 1</b>Soft. Eleven gaps, five settings nobody's checked.</button>
+        <button class="day" type="button" data-day="30" aria-pressed="false"><b>Day 30</b>Hard. Twenty-one for twenty-one.</button>
+      </div>
+      <div class="terminal">
+        <div class="bar" id="cmd">$ bash audit.sh</div>
+        <pre id="out" aria-live="polite"></pre>
+        <p class="tally" id="tally"></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="scoreboard" aria-labelledby="score-title">
+  <div class="wrap">
+    <h2 id="score-title">Same agent. With Tank, and without.</h2>
+    <p class="intro">Every skill ships with evals. Each case runs with the plugin and without it, three times, and a judge model grades the answer against a written checklist.</p>
+    <div class="scores" id="scores"></div>
+    <p class="method" id="method"></p>
+  </div>
+</section>
+
+<section id="drills" aria-labelledby="drills-title">
+  <div class="wrap">
+    <h2 id="drills-title">The drills.</h2>
+    <p class="intro">Each drill is a skill Claude loads when your request needs it. Ask for what you want in your own words. Tank works out which drill fits.</p>
+    <div class="drills">
+      <article class="drill"><h3>repo-setup</h3><p>Community files, a ruleset that keeps main PR-only, DCO, Dependabot grouped monthly, Actions pinned to SHAs. Audits an existing repo against the same list.</p></article>
+      <article class="drill"><h3>fork-pr-safety</h3><p>Reads a stranger's full diff before their CI runs, and approves only the commit it read. Never pushes to their branch.</p></article>
+      <article class="drill"><h3>contributors</h3><p>A welcome for every claim, a reply for every outside PR, a person (not a stale bot) for the quiet ones, and an AI policy.</p></article>
+      <article class="drill"><h3>writing</h3><p>READMEs, release notes and replies that sound like a person wrote them. Uses your project's style guide if you have one.</p></article>
+      <article class="drill"><h3>using-githard</h3><p>The front door. Sends your request to the right drill, and tells you straight when that drill isn't built yet.</p></article>
+    </div>
+    <h3 class="split-head">Still in training</h3>
+    <div class="drills">
+      <article class="drill training"><h3>issues-and-roadmap</h3><p>Milestones, a board, and starter issues people actually finish.</p></article>
+      <article class="drill training"><h3>merging</h3><p>Merge when green, one at a time, without burning the API limit.</p></article>
+      <article class="drill training"><h3>releases</h3><p>Cut, verify and publish, then everything a release leaves behind.</p></article>
+      <article class="drill training"><h3>docs-honesty</h3><p>Docs that only say what shipped.</p></article>
+      <article class="drill training"><h3>security-baseline</h3><p>OpenSSF Scorecard, secrets, signed releases.</p></article>
+      <article class="drill training"><h3>org-setup</h3><p>Profile README, the .github repo, a verified domain.</p></article>
+      <article class="drill training"><h3>growth</h3><p>Getting seen without spamming strangers.</p></article>
+      <article class="drill training"><h3>save-point</h3><p>A handoff file so the next session picks up where this one stopped.</p></article>
+    </div>
+  </div>
+</section>
+
+<section id="rules" aria-labelledby="rules-title">
+  <div class="wrap">
+    <h2 id="rules-title">Tank's tough, not reckless.</h2>
+    <p class="intro">Some things GitHard won't do, however nicely you ask.</p>
+    <ul class="rules">
+      <li>Push to a contributor's branch. It asks them to click Update branch instead.</li>
+      <li>Pass off its own approval as a human review.</li>
+      <li>Open "try our tool" issues on strangers' repos.</li>
+      <li>Contribute where a project's AI policy says no.</li>
+      <li>Pick your license, change your ruleset, or spend your money without asking.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="status" aria-labelledby="status-title">
+  <div class="wrap">
+    <div>
+      <h2 id="status-title">Shipping before the new year.</h2>
+      <p>GitHard isn't released yet, so there's nothing to install today. Five drills are built and passing their evals, eight are in training. Star the repo and you'll see the first release land.</p>
+    </div>
+    <a class="btn go" href="https://github.com/getgithard/githard">Star it on GitHub</a>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>GitHard is MIT licensed. Tank is a very good boy, mostly.</span>
+    <span><a href="https://github.com/getgithard/githard">GitHub</a> &nbsp; <a href="https://docs.githard.dev">Docs</a></span>
+  </div>
+</footer>
+<script src="app.js" defer></script>
+</body>
+</html>

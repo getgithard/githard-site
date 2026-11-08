@@ -1,0 +1,24 @@
+---
+title: GitHard docs
+description: How GitHard sets up and runs your GitHub org and repos, one skill at a time.
+template: splash
+hero:
+  tagline: Boot camp for your GitHub repos. Here's what each drill does, what it asks you, and what it ships.
+  actions:
+    - text: Get started
+      link: /getting-started/
+      icon: right-arrow
+    - text: GitHub
+      link: https://github.com/getgithard/githard
+      icon: external
+      variant: minimal
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+<CardGrid>
+	<Card title="repo-setup" icon="setting">Set up a new repo, or audit an existing one, against one checklist.</Card>
+	<Card title="fork-pr-safety" icon="warning">Read a fork PR's full diff before its CI runs.</Card>
+	<Card title="contributors" icon="comment">Answer every claim and every outside PR.</Card>
+	<Card title="writing" icon="pencil">Project text that sounds like a person wrote it.</Card>
+</CardGrid>

@@ -1,0 +1,65 @@
+{
+  "skills": [
+    {
+      "name": "contributors",
+      "cases": 4,
+      "with": [
+        12,
+        12
+      ],
+      "without": [
+        0,
+        12
+      ]
+    },
+    {
+      "name": "using-githard",
+      "cases": 4,
+      "with": [
+        12,
+        12
+      ],
+      "without": [
+        0,
+        12
+      ]
+    },
+    {
+      "name": "fork-pr-safety",
+      "cases": 5,
+      "with": [
+        15,
+        15
+      ],
+      "without": [
+        4,
+        15
+      ]
+    },
+    {
+      "name": "repo-setup",
+      "cases": 2,
+      "with": [
+        6,
+        6
+      ],
+      "without": [
+        0,
+        6
+      ]
+    },
+    {
+      "name": "writing",
+      "cases": 4,
+      "with": [
+        12,
+        12
+      ],
+      "without": [
+        9,
+        12
+      ]
+    }
+  ],
+  "method": "Claude Code with Opus 5.5, 19 cases, three runs each with GitHard and three without. A Sonnet judge grades each answer against a written checklist, alongside file and regex checks. Runs from 8 Nov 2026. using-githard was re-run the same day after a fix. Where Claude already passes without GitHard, the case stays in as a regression check."
+}
