@@ -97,6 +97,18 @@
    ]
   },
   {
+   "name": "agent-toolkit",
+   "cases": 2,
+   "with": [
+    6,
+    6
+   ],
+   "without": [
+    2,
+    6
+   ]
+  },
+  {
    "name": "writing",
    "cases": 4,
    "with": [
@@ -169,5 +181,5 @@
    ]
   }
  ],
- "method": "Claude Code with Opus 5.5, 45 cases, three runs each with GitHard and three without. A Sonnet judge grades each answer against a written checklist, alongside file and regex checks. Each case shows its latest run, all from 8 and 9 Nov 2026. Where Claude already passes without GitHard, the case stays in as a regression check."
+ "method": "Claude Code with Opus 5.5, 47 cases, three runs each with GitHard and three without. A Sonnet judge grades each answer against a written checklist, alongside file and regex checks. Each case shows its latest run, all from 8 and 9 Nov 2026. Where Claude already passes without GitHard, the case stays in as a regression check."
 }
