@@ -61,6 +61,12 @@ def main():
         "  Permissions-Policy: camera=(), microphone=(), geolocation=()",
         "",
     ])
+    # Hosts cap a header line (Cloudflare Pages at about 2,000 characters). A truncated CSP breaks
+    # the site, so fail loudly instead.
+    longest = max(len(line) for line in headers.splitlines())
+    if longest > 2000:
+        sys.exit(f"the Content-Security-Policy line is {longest} characters, over the 2,000 hosts allow. "
+                 "Move inline style=\"\" attributes and <style> blocks into CSS files to drop their hashes.")
     target = site / "_headers"
     if "--check" in sys.argv:
         if not target.exists() or target.read_text() != headers:
