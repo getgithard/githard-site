@@ -22,6 +22,8 @@ jobs:
         run: npm ci && npm run build
       - name: Home page scripts parse
         run: node --check www/app.js && jq -e . www/data/scores.json >/dev/null
+      - name: Home page headers are current
+        run: python3 scripts/csp-headers.py www --check
   dco:
     if: github.event_name == 'pull_request'
     runs-on: ubuntu-latest
