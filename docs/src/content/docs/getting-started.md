@@ -28,5 +28,8 @@ GitHard isn't released yet. The first release, `v0.1.0`, is planned before the n
 | [`merging`](/skills/merging/) | Merge when green, one PR at a time. |
 | [`releases`](/skills/releases/) | Running notes, a verified draft, and what comes after. |
 | [`docs-honesty`](/skills/docs-honesty/) | Docs that only describe what shipped. |
+| [`security-baseline`](/skills/security-baseline/) | OpenSSF Scorecard, secrets, unsigned upstreams. |
+| [`org-setup`](/skills/org-setup/) | The org's front page and defaults. |
+| [`growth`](/skills/growth/) | Getting seen without spamming anyone. |
+| [`save-point`](/skills/save-point/) | A handoff file the next session can trust. |
 
-Four more are planned: security baseline, org setup, growth and save point.

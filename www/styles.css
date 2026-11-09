@@ -22,6 +22,7 @@
 
 * { box-sizing: border-box; }
 html { color-scheme: dark; }
+@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
 body { margin: 0; background: var(--barracks); color: var(--khaki); font: 400 1.0625rem/1.6 var(--body); }
 a { color: inherit; }
 a:focus-visible, button:focus-visible { outline: 2px solid var(--sand); outline-offset: 3px; }
@@ -39,7 +40,7 @@ img { max-width: 100%; height: auto; display: block; }
 .top nav a:hover { color: var(--khaki); }
 
 /* Hero */
-.hero { position: relative; overflow: hidden; border-bottom: 1px solid var(--line); }
+.hero { position: relative; overflow: hidden; border-bottom: 1px solid var(--line); padding-bottom: 0; }
 .hero::before { content: ""; position: absolute; inset: 0; background: url(img/camo.svg) center/720px; opacity: .07; pointer-events: none; }
 .hero .wrap { position: relative; display: grid; grid-template-columns: 1fr 1fr; align-items: end; gap: 24px; padding-top: 72px; }
 .hero h1 { font: 800 clamp(3.2rem, 8.5vw, 6.6rem)/.9 var(--display); margin: 0 0 24px; letter-spacing: -.005em; }

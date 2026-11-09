@@ -1,113 +1,161 @@
 {
-  "skills": [
-    {
-      "name": "contributors",
-      "cases": 4,
-      "with": [
-        12,
-        12
-      ],
-      "without": [
-        0,
-        12
-      ]
-    },
-    {
-      "name": "using-githard",
-      "cases": 4,
-      "with": [
-        12,
-        12
-      ],
-      "without": [
-        0,
-        12
-      ]
-    },
-    {
-      "name": "fork-pr-safety",
-      "cases": 5,
-      "with": [
-        15,
-        15
-      ],
-      "without": [
-        4,
-        15
-      ]
-    },
-    {
-      "name": "merging",
-      "cases": 3,
-      "with": [
-        9,
-        9
-      ],
-      "without": [
-        2,
-        9
-      ]
-    },
-    {
-      "name": "issues-and-roadmap",
-      "cases": 3,
-      "with": [
-        9,
-        9
-      ],
-      "without": [
-        3,
-        9
-      ]
-    },
-    {
-      "name": "releases",
-      "cases": 4,
-      "with": [
-        12,
-        12
-      ],
-      "without": [
-        6,
-        12
-      ]
-    },
-    {
-      "name": "repo-setup",
-      "cases": 2,
-      "with": [
-        6,
-        6
-      ],
-      "without": [
-        0,
-        6
-      ]
-    },
-    {
-      "name": "docs-honesty",
-      "cases": 3,
-      "with": [
-        9,
-        9
-      ],
-      "without": [
-        6,
-        9
-      ]
-    },
-    {
-      "name": "writing",
-      "cases": 4,
-      "with": [
-        12,
-        12
-      ],
-      "without": [
-        9,
-        12
-      ]
-    }
-  ],
-  "method": "Claude Code with Opus 5.5, 32 cases, three runs each with GitHard and three without. A Sonnet judge grades each answer against a written checklist, alongside file and regex checks. Each skill shows its latest run, all from 8 Nov 2026. Where Claude already passes without GitHard, the case stays in as a regression check."
+ "skills": [
+  {
+   "name": "contributors",
+   "cases": 4,
+   "with": [
+    12,
+    12
+   ],
+   "without": [
+    0,
+    12
+   ]
+  },
+  {
+   "name": "fork-pr-safety",
+   "cases": 5,
+   "with": [
+    15,
+    15
+   ],
+   "without": [
+    4,
+    15
+   ]
+  },
+  {
+   "name": "merging",
+   "cases": 3,
+   "with": [
+    9,
+    9
+   ],
+   "without": [
+    2,
+    9
+   ]
+  },
+  {
+   "name": "repo-setup",
+   "cases": 2,
+   "with": [
+    6,
+    6
+   ],
+   "without": [
+    0,
+    6
+   ]
+  },
+  {
+   "name": "using-githard",
+   "cases": 2,
+   "with": [
+    6,
+    6
+   ],
+   "without": [
+    0,
+    6
+   ]
+  },
+  {
+   "name": "issues-and-roadmap",
+   "cases": 3,
+   "with": [
+    9,
+    9
+   ],
+   "without": [
+    3,
+    9
+   ]
+  },
+  {
+   "name": "releases",
+   "cases": 4,
+   "with": [
+    12,
+    12
+   ],
+   "without": [
+    6,
+    12
+   ]
+  },
+  {
+   "name": "growth",
+   "cases": 3,
+   "with": [
+    9,
+    9
+   ],
+   "without": [
+    5,
+    9
+   ]
+  },
+  {
+   "name": "writing",
+   "cases": 4,
+   "with": [
+    12,
+    12
+   ],
+   "without": [
+    9,
+    12
+   ]
+  },
+  {
+   "name": "docs-honesty",
+   "cases": 3,
+   "with": [
+    9,
+    9
+   ],
+   "without": [
+    6,
+    9
+   ]
+  },
+  {
+   "name": "org-setup",
+   "cases": 3,
+   "with": [
+    9,
+    9
+   ],
+   "without": [
+    8,
+    9
+   ]
+  },
+  {
+   "name": "save-point",
+   "cases": 3,
+   "with": [
+    9,
+    9
+   ],
+   "without": [
+    8,
+    9
+   ]
+  },
+  {
+   "name": "security-baseline",
+   "cases": 3,
+   "with": [
+    9,
+    9
+   ],
+   "without": [
+    9,
+    9
+   ]
+  }
+ ],
+ "method": "Claude Code with Opus 5.5, 42 cases, three runs each with GitHard and three without. A Sonnet judge grades each answer against a written checklist, alongside file and regex checks. Each case shows its latest run, all from 8 and 9 Nov 2026. Where Claude already passes without GitHard, the case stays in as a regression check."
 }
