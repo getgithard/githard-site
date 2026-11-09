@@ -32,4 +32,5 @@ GitHard isn't released yet. The first release, `v0.1.0`, is planned before the n
 | [`org-setup`](/skills/org-setup/) | The org's front page and defaults. |
 | [`growth`](/skills/growth/) | Getting seen without spamming anyone. |
 | [`save-point`](/skills/save-point/) | A handoff file the next session can trust. |
+| [`openssf-badge`](/skills/openssf-badge/) | The OpenSSF Best Practices badge, passing to gold. |
 
