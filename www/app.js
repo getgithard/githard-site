@@ -32,10 +32,12 @@ fetch("data/scores.json").then(r => r.json()).then(({ skills, method }) => {
     <div class="score">
       <h3>${s.name} <small>${s.cases} cases</small></h3>
       <div class="meters">
-        <div class="meter with"><span>With GitHard</span><i><span style="width:${pct(s.with[0], s.with[1])}%"></span></i><output>${s.with[0]}/${s.with[1]}</output></div>
-        <div class="meter without"><span>Without</span><i><span style="width:${pct(s.without[0], s.without[1])}%"></span></i><output>${s.without[0]}/${s.without[1]}</output></div>
+        <div class="meter with"><span>With GitHard</span><i><span data-w="${pct(s.with[0], s.with[1])}"></span></i><output>${s.with[0]}/${s.with[1]}</output></div>
+        <div class="meter without"><span>Without</span><i><span data-w="${pct(s.without[0], s.without[1])}"></span></i><output>${s.without[0]}/${s.without[1]}</output></div>
       </div>
     </div>`).join("");
+  // Widths go through the CSSOM: the CSP blocks style="" attributes written as HTML.
+  document.querySelectorAll("#scores [data-w]").forEach(e => { e.style.width = e.dataset.w + "%"; });
   document.getElementById("method").textContent = method;
 }).catch(() => { document.getElementById("scores").textContent = "Couldn't load the scores. They're in the repo's eval results."; });
 
