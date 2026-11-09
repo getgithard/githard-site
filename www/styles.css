@@ -106,6 +106,7 @@ h2 { font: 800 clamp(2.2rem, 5vw, 3.6rem)/.95 var(--display); margin: 0 0 16px; 
 /* Status */
 .status .wrap { display: grid; grid-template-columns: 1fr auto; gap: 32px; align-items: center; }
 .status p { color: var(--dust); max-width: 36em; }
+.status code { font: 400 .9em/1 var(--mono); color: var(--khaki); }
 
 footer { padding: 40px 0 56px; color: var(--dust); font-size: .9rem; }
 footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; }
