@@ -16,7 +16,7 @@ Docs that describe a feature you haven't shipped cost you twice: the reader lose
 
 ## Audit every release
 
-After a release, GitHard sends the read-only `docs-auditor` agent through your docs. It compares them with the release's help text, notes and links, and reports each untrue claim as `path:line` with the evidence.
+After a release, Claude works through the skill's audit checklist with your docs. It compares them with the release's help text, notes and links, not with `main`, and reports each untrue claim as `path:line` with the evidence.
 
 Two of those checks are a script you can run yourself:
 
@@ -25,9 +25,9 @@ bash ~/githard/skills/docs-honesty/audit-docs.sh docs/ --tool jot --help-cmd "./
 ```
 
 ```
+dead     docs/install.md:12  https://example.com/schema.json (404)
 untrue   docs/usage.md:6  `jot sync` isn't in the help text
 untrue   docs/usage.md:6  `--watch` isn't in the help text
-dead     docs/install.md:12  https://example.com/schema.json (404)
 ```
 
 ## A site that hides its 404s

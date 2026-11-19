@@ -9,15 +9,15 @@ When you approve CI on a PR from a fork, a stranger's code runs on your runners.
 
 ## Before CI runs
 
-1. The `fork-pr-reviewer` agent reads the full diff and returns a verdict: `SAFE TO RUN CI`, `OWNER MUST REVIEW` or `DON'T RUN CI`, followed by `path:line` findings. It's read-only: it never approves, comments, pushes or merges.
+1. Claude reads the full diff, every line, using the skill's review checklist, and gives a verdict: `SAFE TO RUN CI`, `OWNER MUST REVIEW` or `DON'T RUN CI`, followed by `path:line` findings. The review only reads: it never approves, comments, pushes or merges.
 2. Anything under `.github/`, anything near secrets, or code that runs in CI goes to you before anything is approved.
 3. GitHard approves only the runs on the PR's current head commit:
 
 ```sh
-bash ~/githard/skills/fork-pr-safety/approve-runs.sh OWNER/REPO 41
+bash ~/githard/skills/fork-pr-safety/approve-runs.sh OWNER/REPO 41 --head <SHA>
 ```
 
-If the contributor pushes again after the review, the runs on the new commit wait for another look.
+`<SHA>` is the commit the review read. If the contributor pushed since, the script refuses, and the runs on the new commit wait for another look. Add `--dry-run` to see which runs it would approve without approving any.
 
 ## What it won't do
 
