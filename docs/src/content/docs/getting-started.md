@@ -14,7 +14,7 @@ In Claude Code:
 /plugin install githard@githard
 ```
 
-Then ask for what you want in your own words. If the skills don't show up straight away, start a new session. The current release is [githard--v0.1.0](https://github.com/getgithard/githard/releases/tag/githard--v0.1.0).
+Then ask for what you want in your own words. If the skills don't show up straight away, start a new session. The current release is [githard--v0.2.0](https://github.com/getgithard/githard/releases/tag/githard--v0.2.0).
 
 ## What you'll need
 

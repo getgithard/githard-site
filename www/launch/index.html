@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GitHard v0.2.0: your repo's first day of boot camp</title>
+<meta name="description" content="GitHard is a Claude Code plugin that sets up your GitHub org and repos the way you'd want them a year from now, then helps you run them. v0.2.0 is out.">
+<meta property="og:title" content="GitHard v0.2.0: your repo's first day of boot camp">
+<meta property="og:description" content="A Claude Code plugin that sets up and runs GitHub orgs and repos the way well-run projects do. Fifteen skills, no bots.">
+<meta property="og:image" content="https://githard.dev/img/social.png">
+<meta property="og:url" content="https://githard.dev/launch/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/img/favicon.png">
+<link rel="preload" href="/fonts/stencil.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="/"><img src="/img/tank-head.png" alt="">GitHard</a>
+    <nav>
+      <a class="keep" href="https://docs.githard.dev">Docs</a>
+      <a class="keep" href="https://github.com/getgithard/githard">GitHub</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<article class="post" aria-labelledby="post-title">
+  <div class="wrap">
+    <p class="dateline">19 November 2026 · v0.2.0</p>
+    <h1 id="post-title">Your repo's first day of <span>boot camp.</span></h1>
+
+    <p class="lede">Most repos get set up once, in a hurry, and never looked at again. You know the signs: <code>main</code> takes a direct push, Actions are pinned to a tag someone can move, a fork PR's CI got approved without anyone reading the diff, and someone claimed an issue in September and is still waiting for a reply.</p>
+
+    <p>GitHard is a Claude Code plugin that fixes those, and then keeps them fixed. It's fifteen skills. You ask in your own words, "set this repo up properly" or "can I approve CI on this fork PR?", and Claude loads the skill that fits. There's no server and no bot: it works through your own Claude Code session and your own <code>gh</code> login.</p>
+
+    <h2>What it does on day one</h2>
+    <p>Point it at a repo, new or ten years old, and it audits it against one list: community files, a ruleset that keeps <code>main</code> PR-only, DCO, Dependabot grouped monthly, every Action pinned to a commit SHA, secret scanning with push protection. Then it fixes what you say yes to. The same goes for your org: its profile and default community files, plus the settings only an owner can change, such as 2FA for everyone, handed to you to click.</p>
+    <p>After that, it helps you run the place. It reads a stranger's whole diff before their CI runs, and approves only the commit it read. It merges when the required checks pass on the commit that was tested, one PR at a time. It drafts releases with checksums and build attestations, and checks them before anyone publishes. It writes docs that only describe what shipped, and it finds every claim, PR and issue that's still waiting on you.</p>
+
+    <h2>What it won't do</h2>
+    <p>Push to a contributor's branch. Pass off its own approval as a human review. Open "try our tool" issues on strangers' repos. Contribute where a project's AI policy says no. Pick your licence, change your ruleset or spend your money without asking you first.</p>
+
+    <h2>We ran it on itself first</h2>
+    <p>First, GitHard took <a href="https://github.com/keyparity/keyparity">keyparity</a>, a small Bun CLI, from an empty org to a published, attested release on npm with an OpenSSF Best Practices badge. It found eight gaps in itself along the way, and each one is fixed.</p>
+    <p>For this release we pointed its own advice at its own scripts. Every script now runs in CI against stand-ins for GitHub, with 90% statement coverage and a fuzz of every argument list. That turned up four real bugs. The worst: the merge script took a failed check from outside GitHub Actions for a download flake, and spent both of its reruns on nothing before it gave up. A security review of every script and workflow found four more holes, and those are closed too. The <a href="https://github.com/getgithard/githard/releases/tag/githard--v0.2.0">release notes</a> list each one.</p>
+    <p>Every skill ships with evals that run with the plugin and without it, so you can see what GitHard adds and where Claude already does fine on its own. They're in the repo, and the <a href="/#scoreboard">scoreboard</a> has the numbers.</p>
+
+    <h2>Try it on one repo</h2>
+    <div class="terminal"><pre>/plugin marketplace add getgithard/githard
+/plugin install githard@githard</pre></div>
+    <p>Then ask it to audit a repo you've been meaning to tidy. If it gets something wrong, or misses something your project needs, tell us in <a href="https://github.com/getgithard/githard/discussions">Discussions</a>. That's the most useful thing you can do for it right now.</p>
+    <div class="actions">
+      <a class="btn go" href="https://docs.githard.dev/getting-started/">Install it</a>
+      <a class="btn quiet" href="https://github.com/getgithard/githard">See it on GitHub</a>
+    </div>
+  </div>
+</article>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>GitHard is MIT licensed. Tank is a very good boy, mostly.</span>
+    <span><a href="https://github.com/getgithard/githard">GitHub</a> &nbsp; <a href="https://docs.githard.dev">Docs</a></span>
+  </div>
+</footer>
+</body>
+</html>
